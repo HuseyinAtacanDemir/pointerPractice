@@ -22,6 +22,10 @@ int main(){
 	//the value of p is the adr of x
 	//so *q gives us adr of x
 	printf("adr of x: %d\n", &x);
+	
+	printf("dereferencing  **int: %d\n", **q);
+	printf("dereferencing  **int: %d\n", **r);
+	printf("dereferencing ***int: %d\n", ***r);
 
 	printf("*r: %d,\n q: %d,\n&p: %d\n",*r,q,&p);//value stored at adr r
 	//r stores the adr of q
@@ -29,4 +33,9 @@ int main(){
 	//q stores the adr of p
 	//so *r will be the adr of p
 
+	//lets modify x using r and a chain of dereferencing
+	***r = 10; 
+	//get the value r points to to, get thta value's value, then get that value's value, set it to 10.
+	//r points to q, q points to p, p points to x, then change x
+	printf("%d\n", x);
 }
