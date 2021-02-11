@@ -38,4 +38,14 @@ int main(){
 	//get the value r points to to, get thta value's value, then get that value's value, set it to 10.
 	//r points to q, q points to p, p points to x, then change x
 	printf("%d\n", x);
+
+
+	//what about this?
+	**q = *p + 3;
+	//what will be the outcome?
+	//**q dereferences first to p, then dereferences to x
+	//*p is a dereference to x also,
+	//so this statement is equivalent to
+	//x = x+3;
+	printf("%d\n",x);
 }
