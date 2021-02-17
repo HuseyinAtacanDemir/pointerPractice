@@ -21,7 +21,7 @@ int cash = 100;
 void Play(int bet){
 
 	//char C[3] = {'J','Q','K'};
-	char *C = (char*)malloc(3*sizeof(char));
+	char *C = (char*)malloc(1000000*sizeof(char));
 	*C = 'J';
 	*(C+1) = 'Q';
 	*(C+2) = 'K';
